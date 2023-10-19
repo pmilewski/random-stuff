@@ -11,6 +11,9 @@ dependencies:
   graphql:
     specifier: ^16.8.1
     version: 16.8.1
+  inspirational-quotes:
+    specifier: ^2.0.1
+    version: 2.0.1
 
 devDependencies:
   nodemon:
@@ -904,6 +907,10 @@ packages:
 
   /inherits@2.0.4:
     resolution: {integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==}
+    dev: false
+
+  /inspirational-quotes@2.0.1:
+    resolution: {integrity: sha512-IYJEdSUphF4HOoOiABua2l7aUZ2OBTc/NpihPuENF3ieXEBuywOTtYle7zzvZfEJKouG9utOwQpMQtm0GIB2BQ==}
     dev: false
 
   /ipaddr.js@1.9.1:

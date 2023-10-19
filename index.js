@@ -1,22 +1,8 @@
-const { ApolloServer, gql } = require('apollo-server');
-
+const { ApolloServer, } = require('apollo-server');
+const rootValue = require('./rootValue');
+const typeDefs = require('./typeDefs');
 const PORT = process.env.PORT || 4000;
 
-const typeDefs = gql`
-  type Query {
-    greeting: String!,
-    interestingUrls: [String!]!,
-  }
-`;
+const server = new ApolloServer({ typeDefs, rootValue });
 
-const data = {
-    greeting: 'Hello World!',
-    interestingUrls: [
-        'https://kodemia.mx',
-        'https://google.com',
-    ],
-};
-
-const server = new ApolloServer({ typeDefs, rootValue: data });
-
-server.listen().then(({ url }) => console.log(`Server started at ${url}`));
+server.listen({port: PORT}).then(({ url }) => console.log(`Server started at ${url}`));
